@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "Dune Balances API Proxy Server"
+version = "0.1.0"
+description = "Proxy server to make API calls to Dune Balances, and persist data"
+authors = ["Eugene Lee Jun Ping <eugeneleejunping@gmail.com>"]
+readme = "README.md"
+include = [ { path = "src" } ]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.8.5"
+toml = "^0.10.2"
+sqlalchemy = "^2.0.21"
+psycopg2 = "^2.9.9"
+types-toml = "^0.10.8.7"
+pydantic = "^2.4.2"
+alembic = "^1.12.0"
+requests = "^2.31.0"
+retry = "^0.9.2"
+types-requests = "^2.31.0.20240406"
+types-retry = "^0.9.9.4"
+click = "^8.1.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.2"
+black = "^23.9.1"
+ruff = "^0.0.292"
+mypy = "^1.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+ignore = ["E501"]
